@@ -1,6 +1,7 @@
 import React from "react";
-import CardsContainer from "./components/cardsContainer";
+import CardContainer from "./components/cardContainer";
 
+// react-bootstrap components
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "react-bootstrap/Container";
 
@@ -12,7 +13,7 @@ function App() {
       <Jumbotron>
         <h1 className="header">Currency Converter</h1>
       </Jumbotron>
-      <CardsContainer />
+      <CardContainer />
     </Container>
   );
 }
