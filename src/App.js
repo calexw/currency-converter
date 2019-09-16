@@ -1,5 +1,5 @@
 import React from "react";
-import CardContainer from "./components/cardContainer";
+import CardContainer from "./components/cardsContainer";
 
 // react-bootstrap components
 import Jumbotron from "react-bootstrap/Jumbotron";
