@@ -17,7 +17,7 @@ class CardContainer extends Component {
   constructor() {
     super();
     this.state = {
-      rates: [],
+      data: [],
       currencyOne: DataReference[0],
       currencyTwo: DataReference[1],
       amountOne: 1,
@@ -58,7 +58,10 @@ class CardContainer extends Component {
   };
 
   componentDidMount() {
-    // fetchRates().then(rates => this.setState({ rates }));
+    fetchRates().then(data => {
+      this.setState({ data });
+      this.updateReference();
+    });
   }
 
   render() {

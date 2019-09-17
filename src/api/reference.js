@@ -9,7 +9,7 @@ const DataReference = [
     name: "British pound",
     symbol: "£",
     flag: "https://www.ecb.europa.eu/shared/img/flags/GBP.gif",
-    rate: "0.89133"
+    rate: 0.89133
   },
   {
     id: 1,
@@ -17,7 +17,7 @@ const DataReference = [
     name: "Euro",
     symbol: "€",
     flag: "./images/EUR-16.png",
-    rate: "1"
+    rate: 1
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const DataReference = [
     name: "US dollar",
     symbol: "$",
     flag: "https://www.ecb.europa.eu/shared/img/flags/USD.gif",
-    rate: "1.1003"
+    rate: 1.1003
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const DataReference = [
     name: "Japanese yen",
     symbol: "¥",
     flag: "https://www.ecb.europa.eu/shared/img/flags/JPY.gif",
-    rate: "118.51"
+    rate: 118.51
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const DataReference = [
     name: "Bulgarian lev",
     symbol: "лв.",
     flag: "https://www.ecb.europa.eu/shared/img/flags/BGN.gif",
-    rate: "1.9558"
+    rate: 1.9558
   },
   {
     id: 5,
@@ -49,7 +49,7 @@ const DataReference = [
     name: "Czech koruna",
     symbol: "Kč",
     flag: "https://www.ecb.europa.eu/shared/img/flags/CZK.gif",
-    rate: "25.867"
+    rate: 25.867
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ const DataReference = [
     name: "Danish krone",
     symbol: "kr",
     flag: "https://www.ecb.europa.eu/shared/img/flags/DKK.gif",
-    rate: "7.4607"
+    rate: 7.4607
   },
   {
     id: 7,
@@ -65,7 +65,7 @@ const DataReference = [
     name: "Hungarian forint",
     symbol: "Ft",
     flag: "https://www.ecb.europa.eu/shared/img/flags/HUF.gif",
-    rate: "332.40"
+    rate: 332.4
   },
   {
     id: 8,
@@ -73,7 +73,7 @@ const DataReference = [
     name: "Polish zloty",
     symbol: "zł",
     flag: "https://www.ecb.europa.eu/shared/img/flags/PLN.gif",
-    rate: "4.3335"
+    rate: 4.3335
   },
   {
     id: 9,
@@ -81,7 +81,7 @@ const DataReference = [
     name: "Romanian leu",
     symbol: "$",
     flag: "https://www.ecb.europa.eu/shared/img/flags/RON.gif",
-    rate: "4.7348"
+    rate: 4.7348
   },
   {
     id: 10,
@@ -89,7 +89,7 @@ const DataReference = [
     name: "Swedish krona",
     symbol: "kr",
     flag: "https://www.ecb.europa.eu/shared/img/flags/SEK.gif",
-    rate: "10.6563"
+    rate: 10.6563
   },
   {
     id: 11,
@@ -97,7 +97,7 @@ const DataReference = [
     name: "Swiss franc",
     symbol: "₣",
     flag: "https://www.ecb.europa.eu/shared/img/flags/CHF.gif",
-    rate: "1.0934"
+    rate: 1.0934
   },
   {
     id: 12,
@@ -105,7 +105,7 @@ const DataReference = [
     name: "Icelandic krona",
     symbol: "kr",
     flag: "https://www.ecb.europa.eu/shared/img/flags/ISK.gif",
-    rate: "138.70"
+    rate: 138.7
   },
   {
     id: 13,
@@ -113,7 +113,7 @@ const DataReference = [
     name: "Norwegian krone",
     symbol: "kr",
     flag: "https://www.ecb.europa.eu/shared/img/flags/NOK.gif",
-    rate: "9.8745"
+    rate: 9.8745
   },
   {
     id: 14,
@@ -121,7 +121,7 @@ const DataReference = [
     name: "Croatian kuna",
     symbol: "kn",
     flag: "https://www.ecb.europa.eu/shared/img/flags/HRK.gif",
-    rate: "7.3945"
+    rate: 7.3945
   },
   {
     id: 15,
@@ -129,7 +129,7 @@ const DataReference = [
     name: "Russian rouble",
     symbol: "₽",
     flag: "https://www.ecb.europa.eu/shared/img/flags/RUB.gif",
-    rate: "71.8661"
+    rate: 71.8661
   },
   {
     id: 16,
@@ -137,7 +137,7 @@ const DataReference = [
     name: "Turkish lira",
     symbol: "₺",
     flag: "https://www.ecb.europa.eu/shared/img/flags/TRY.gif",
-    rate: "6.3335"
+    rate: 6.3335
   },
   {
     id: 17,
@@ -145,7 +145,7 @@ const DataReference = [
     name: "Australian dollar",
     symbol: "$",
     flag: "https://www.ecb.europa.eu/shared/img/flags/AUD.gif",
-    rate: "1.6021"
+    rate: 1.6021
   },
   {
     id: 18,
@@ -153,7 +153,7 @@ const DataReference = [
     name: "Brazilian real",
     symbol: "R$",
     flag: "https://www.ecb.europa.eu/shared/img/flags/BRL.gif",
-    rate: "4.4721"
+    rate: 4.4721
   },
   {
     id: 19,
@@ -161,7 +161,7 @@ const DataReference = [
     name: "Canadian dollar",
     symbol: "$",
     flag: "https://www.ecb.europa.eu/shared/img/flags/CAD.gif",
-    rate: "1.4468"
+    rate: 1.4468
   },
   {
     id: 20,
@@ -169,7 +169,7 @@ const DataReference = [
     name: "Chinese yuan renminbi",
     symbol: "¥",
     flag: "https://www.ecb.europa.eu/shared/img/flags/CNY.gif",
-    rate: "7.8309"
+    rate: 7.8309
   },
   {
     id: 21,
@@ -177,7 +177,7 @@ const DataReference = [
     name: "Hong Kong dollar",
     symbol: "$",
     flag: "https://www.ecb.europa.eu/shared/img/flags/HKD.gif",
-    rate: "8.6261"
+    rate: 8.6261
   },
   {
     id: 22,
@@ -185,7 +185,7 @@ const DataReference = [
     name: "Indonesian rupiah",
     symbol: "Rp",
     flag: "https://www.ecb.europa.eu/shared/img/flags/IDR.gif",
-    rate: "15470.22"
+    rate: 15470.22
   },
   {
     id: 23,
@@ -193,7 +193,7 @@ const DataReference = [
     name: "Israeli shekel",
     symbol: "₪",
     flag: "https://www.ecb.europa.eu/shared/img/flags/ILS.gif",
-    rate: "3.8990"
+    rate: 3.899
   },
   {
     id: 24,
@@ -201,7 +201,7 @@ const DataReference = [
     name: "Indian rupee",
     symbol: "₹",
     flag: "https://www.ecb.europa.eu/shared/img/flags/INR.gif",
-    rate: "78.8720"
+    rate: 78.872
   },
   {
     id: 25,
@@ -209,7 +209,7 @@ const DataReference = [
     name: "South Korean won",
     symbol: "₩",
     flag: "https://www.ecb.europa.eu/shared/img/flags/KRW.gif",
-    rate: "1312.34"
+    rate: 1312.34
   },
   {
     id: 26,
@@ -217,7 +217,7 @@ const DataReference = [
     name: "Mexican peso",
     symbol: "$",
     flag: "https://www.ecb.europa.eu/shared/img/flags/MXN.gif",
-    rate: "21.4565"
+    rate: 21.4565
   },
   {
     id: 27,
@@ -225,7 +225,7 @@ const DataReference = [
     name: "Malaysian ringgit",
     symbol: "RM",
     flag: "https://www.ecb.europa.eu/shared/img/flags/MYR.gif",
-    rate: "4.5987"
+    rate: 4.5987
   },
   {
     id: 28,
@@ -233,7 +233,7 @@ const DataReference = [
     name: "New Zealand dollar",
     symbol: "$",
     flag: "https://www.ecb.europa.eu/shared/img/flags/NZD.gif",
-    rate: "1.7147"
+    rate: 1.7147
   },
   {
     id: 29,
@@ -241,7 +241,7 @@ const DataReference = [
     name: "Philippine peso",
     symbol: "₱",
     flag: "https://www.ecb.europa.eu/shared/img/flags/PHP.gif",
-    rate: "57.354"
+    rate: 57.354
   },
   {
     id: 30,
@@ -249,7 +249,7 @@ const DataReference = [
     name: "Singapore dollar",
     symbol: "$",
     flag: "https://www.ecb.europa.eu/shared/img/flags/SGD.gif",
-    rate: "1.5180"
+    rate: 1.518
   },
   {
     id: 31,
@@ -257,7 +257,7 @@ const DataReference = [
     name: "Thai baht",
     symbol: "฿",
     flag: "https://www.ecb.europa.eu/shared/img/flags/THB.gif",
-    rate: "33.653"
+    rate: 33.653
   },
   {
     id: 32,
@@ -265,7 +265,7 @@ const DataReference = [
     name: "South African rand",
     symbol: "R",
     flag: "https://www.ecb.europa.eu/shared/img/flags/ZAR.gif",
-    rate: "16.1384"
+    rate: 16.1384
   }
 ];
 
