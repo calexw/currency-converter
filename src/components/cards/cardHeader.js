@@ -1,6 +1,7 @@
 import React from "react";
-import { getExchange } from "../../utils";
 import Card from "react-bootstrap/Card";
+
+import { getExchange } from "../../utils";
 
 const CardHeader = ({ from, to }) => {
   let startAmount = 1;

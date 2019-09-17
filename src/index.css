@@ -31,13 +31,12 @@ code {
 
 .card {
   background-color: darkcyan;
-  min-height: 200px;
+  min-height: 14rem;
 }
 
 .inputArea {
   color: lightseagreen;
   font-size: 2.5em;
-  height: 200px;
 }
 
 .inputAmount {
@@ -45,6 +44,9 @@ code {
   color: white;
   border: none;
   width: 80%;
+}
+.inputAmount:hover {
+  background-color: rgba(200, 200, 200, 0.1);
 }
 
 input[type="number"]::-webkit-inner-spin-button,

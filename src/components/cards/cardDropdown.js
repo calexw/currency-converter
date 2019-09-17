@@ -1,8 +1,8 @@
 import React from "react";
+import Dropdown from "react-bootstrap/Dropdown";
+
 import DataReference from "../../api/reference.js";
 import { sortData } from "../../utils";
-
-import Dropdown from "react-bootstrap/Dropdown";
 
 const CardDropdown = ({ currency, handler }) => {
   let dropdownItems = sortData(DataReference).map(currency => (

@@ -1,23 +1,18 @@
 import React, { Component } from "react";
-import DataReference from "../api/reference.js";
-import { getExchange, roundNumber } from "../utils";
-
-// card components
-import CardHeader from "./cards/cardHeader";
-import CardDropdown from "./cards/cardDropdown";
-import CardInput from "./cards/cardInput";
-
-// react-bootstrap components
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
+
+import DataReference from "../api/reference.js";
+import { fetchRates } from "../api/data.js";
+import { getExchange, roundNumber } from "../utils";
+import Cards from "./cards";
 
 class CardContainer extends Component {
   constructor() {
     super();
     this.state = {
       data: [],
+      reference: DataReference,
       currencyOne: DataReference[0],
       currencyTwo: DataReference[1],
       amountOne: 1,
@@ -25,36 +20,43 @@ class CardContainer extends Component {
     };
   }
 
+  dropdownHandler = (input, code) => {
+    let { currencyOne, currencyTwo, amountOne, amountTwo } = this.state;
+    if (input === "inputOne") {
+      currencyOne = this.getCurrency(code);
+      amountOne = getExchange(currencyOne, currencyTwo, amountTwo);
+      this.setState({ currencyOne, amountOne });
+    } else {
+      currencyTwo = this.getCurrency(code);
+      amountTwo = getExchange(currencyTwo, currencyOne, amountOne);
+      this.setState({ currencyTwo, amountTwo });
+    }
+  };
+
+  amountHandler = (input, event) => {
+    let { currencyOne, currencyTwo, amountOne, amountTwo } = this.state;
+    if (input === "inputOne") {
+      amountOne = event.target.value;
+      amountTwo = getExchange(currencyOne, currencyTwo, amountOne);
+    } else {
+      amountTwo = event.target.value;
+      amountOne = getExchange(currencyTwo, currencyOne, amountTwo);
+    }
+    this.setState({ amountOne, amountTwo });
+  };
+
   getCurrency = input => {
-    return DataReference.find(currency => currency.code === input);
+    return this.state.reference.find(currency => currency.code === input);
   };
 
-  amountHandlerOne = event => {
-    let { currencyOne, currencyTwo } = this.state;
-    let amountOne = event.target.value;
-    let amountTwo = getExchange(currencyOne, currencyTwo, amountOne);
-    this.setState({ amountOne, amountTwo });
+  getCurrentRate = currency => {
+    currency.rate = this.state.data[currency.code] || 1;
+    return currency;
   };
 
-  amountHandlerTwo = event => {
-    let { currencyOne, currencyTwo } = this.state;
-    let amountTwo = event.target.value;
-    let amountOne = getExchange(currencyTwo, currencyOne, amountTwo);
-    this.setState({ amountOne, amountTwo });
-  };
-
-  dropdownHandlerOne = input => {
-    let { currencyTwo, amountTwo } = this.state;
-    let currencyOne = this.getCurrency(input);
-    let amountOne = getExchange(currencyOne, currencyTwo, amountTwo);
-    this.setState({ currencyOne, amountOne });
-  };
-
-  dropdownHandlerTwo = input => {
-    let { currencyOne, amountOne } = this.state;
-    let currencyTwo = this.getCurrency(input);
-    let amountTwo = getExchange(currencyTwo, currencyOne, amountOne);
-    this.setState({ currencyTwo, amountTwo });
+  updateReference = () => {
+    const reference = DataReference.map(this.getCurrentRate);
+    this.setState({ reference });
   };
 
   componentDidMount() {
@@ -66,45 +68,25 @@ class CardContainer extends Component {
 
   render() {
     let { currencyOne, currencyTwo, amountOne, amountTwo } = this.state;
+    console.log(this.state.reference);
 
     return (
       <Container className="p-3">
         <Row className="justify-content-md-center">
-          <Col className="col" sm={12} md={6}>
-            <Card>
-              <CardHeader from={currencyOne} to={currencyTwo} />
-              <Card.Body>
-                <CardDropdown
-                  currency={currencyOne}
-                  handler={this.dropdownHandlerOne}
-                />
-                <CardInput
-                  currency={currencyOne}
-                  amount={amountOne}
-                  handler={this.amountHandlerOne}
-                />
-              </Card.Body>
-            </Card>
-            <br />
-          </Col>
-
-          <Col className="col" sm={12} md={6}>
-            <Card>
-              <CardHeader from={currencyTwo} to={currencyOne} />
-              <Card.Body>
-                <CardDropdown
-                  currency={currencyTwo}
-                  handler={this.dropdownHandlerTwo}
-                />
-                <CardInput
-                  currency={currencyTwo}
-                  amount={amountTwo}
-                  handler={this.amountHandlerTwo}
-                />
-              </Card.Body>
-            </Card>
-            <br />
-          </Col>
+          <Cards
+            from={currencyOne}
+            to={currencyTwo}
+            amount={amountOne}
+            dropdownHandler={this.dropdownHandler.bind(this, "inputOne")}
+            amountHandler={this.amountHandler.bind(this, "inputOne")}
+          />
+          <Cards
+            from={currencyTwo}
+            to={currencyOne}
+            amount={amountTwo}
+            dropdownHandler={this.dropdownHandler.bind(this, "inputTwo")}
+            amountHandler={this.amountHandler.bind(this, "inputTwo")}
+          />
         </Row>
       </Container>
     );

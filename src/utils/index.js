@@ -15,8 +15,8 @@ export const roundNumber = (num, decimalPlaces = 2) => {
 // sort object array alphabetically, default property is name
 export const sortData = (array, property = "name") => {
   return array.sort(function(a, b) {
-    var x = a[property].toLowerCase();
-    var y = b[property].toLowerCase();
+    var x = a[property].toString().toLowerCase();
+    var y = b[property].toString().toLowerCase();
     if (x < y) {
       return -1;
     }
