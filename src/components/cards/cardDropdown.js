@@ -5,13 +5,13 @@ import DataReference from "../../api/reference.js";
 import { sortData } from "../../utils";
 
 const CardDropdown = ({ currency, handler }) => {
-  let dropdownItems = sortData(DataReference).map(currency => (
+  const dropdownItems = sortData(DataReference).map(currency => (
     <Dropdown.Item key={currency.id} eventKey={currency.code}>
       <img src={currency.flag} alt={currency.code} /> &nbsp; {currency.name}
     </Dropdown.Item>
   ));
 
-  let dropdownTitle = currency => (
+  const dropdownTitle = currency => (
     <span>
       <img src={currency.flag} alt={currency.code} width="24" />
       &nbsp; {currency.name}

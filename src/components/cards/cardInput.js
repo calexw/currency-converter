@@ -6,7 +6,7 @@ const CardInput = ({ currency, amount, handler }) => {
     <Card.Text>
       <br />
       <span className="inputArea">
-        {currency.symbol} &nbsp;
+        <span className="inputSymbol">{currency.symbol}</span>
         <input
           className="inputAmount"
           type="number"

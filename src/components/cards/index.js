@@ -7,14 +7,14 @@ import CardHeader from "./cardHeader";
 import CardDropdown from "./cardDropdown";
 import CardInput from "./cardInput";
 
-const Cards = ({ from, to, amount, dropdownHandler, amountHandler }) => {
+const Cards = ({ to, from, amount, dropdownHandler, amountHandler }) => {
   return (
-    <Col className="col" sm={12} md={6}>
+    <Col className="col" md={12} lg={6}>
       <Card>
-        <CardHeader from={from} to={to} />
+        <CardHeader currency={to} from={from} />
         <Card.Body>
-          <CardDropdown currency={from} handler={dropdownHandler} />
-          <CardInput currency={from} amount={amount} handler={amountHandler} />
+          <CardDropdown currency={to} handler={dropdownHandler} />
+          <CardInput currency={to} amount={amount} handler={amountHandler} />
         </Card.Body>
       </Card>
       <br />

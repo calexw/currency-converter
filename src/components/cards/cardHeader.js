@@ -3,14 +3,14 @@ import Card from "react-bootstrap/Card";
 
 import { getExchange } from "../../utils";
 
-const CardHeader = ({ from, to }) => {
-  let startAmount = 1;
-  let decimalPlaces = 4;
-  let exchangeRate = getExchange(from, to, startAmount, decimalPlaces);
+const CardHeader = ({ currency, from }) => {
+  const startAmount = 1;
+  const decimalPlaces = 4;
+  const exchangeRate = getExchange(currency, from, startAmount, decimalPlaces);
 
   return (
     <Card.Header>
-      {startAmount} {from.code} = {exchangeRate} {to.code}
+      {startAmount} {currency.code} = {exchangeRate} {from.code}
     </Card.Header>
   );
 };

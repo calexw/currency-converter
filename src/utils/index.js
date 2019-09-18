@@ -2,7 +2,7 @@
 
 // calculate exchange rate with optional input amount and decimal places
 export const getExchange = (from, to, inputAmount = 1, decimalPlaces = 2) => {
-  return roundNumber((from.rate / to.rate) * inputAmount, decimalPlaces);
+  return roundNumber((to.rate / from.rate) * inputAmount, decimalPlaces);
 };
 
 // round number to fixed decimal places, default assumes currency
@@ -15,8 +15,8 @@ export const roundNumber = (num, decimalPlaces = 2) => {
 // sort object array alphabetically, default property is name
 export const sortData = (array, property = "name") => {
   return array.sort(function(a, b) {
-    var x = a[property].toString().toLowerCase();
-    var y = b[property].toString().toLowerCase();
+    let x = a[property].toString().toLowerCase();
+    let y = b[property].toString().toLowerCase();
     if (x < y) {
       return -1;
     }

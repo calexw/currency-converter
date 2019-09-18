@@ -1,9 +1,9 @@
 import React from "react";
-import CardContainer from "./components/cardsContainer";
-
-// react-bootstrap components
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "react-bootstrap/Container";
+
+// cards component
+import CardContainer from "./components/cardsContainer";
 
 import "./App.css";
 
