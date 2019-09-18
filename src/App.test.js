@@ -36,8 +36,8 @@ it("utils perform as expected", () => {
 
   expect(amount1).toEqual("1.23");
   expect(amount2).toEqual("1.679");
-  expect(rate1).toEqual("0.74");
-  expect(rate2).toEqual("7.35");
+  expect(rate1).toEqual("1.36");
+  expect(rate2).toEqual("13.60");
   expect(rate3).toEqual("1.00");
   expect(data1[0].name).toEqual("coconut");
   expect(data2[0].name).toEqual("coconut");
